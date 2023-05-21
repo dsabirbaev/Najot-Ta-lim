@@ -416,7 +416,7 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 99;
+  z-index: 99999;
   background-color: #F1F0EE;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
