@@ -1,0 +1,252 @@
+#workplaces {
+    width: 100%;
+    min-height: 594px;
+    .workplaces-wrapper {
+        padding: 48px 0;
+        .workplaces {
+            &__title {
+                @include font-style(32px, $ff-LatoExtraBold, $color-black);
+            }
+
+            &__text {
+                @include font-style(16px, $ff-LatoSemiBold, $color-text);
+                line-height: 24px;
+            }
+
+            &__brand {
+                margin-top: 48px;
+                position: relative;
+                img {
+                    padding: 16px 12px;
+                    background-color: #f9f8f7;
+                    border-radius: 8px;
+                    filter: grayscale(1);
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    &:hover{
+                        filter: grayscale(0);
+                        background-color: $color-white;
+                        box-shadow: 0 0 5px silver;
+                    }
+                }
+                
+            }
+        }
+    }
+}
+
+
+////////////// media queries ///////////////////////
+
+@media only screen and (max-width: 1024px) {
+    #workplaces {
+        width: 100%;
+        min-height: 594px;
+    
+        .workplaces-wrapper {
+            padding: 48px 0;
+    
+            .workplaces {
+                &__title {
+                    @include font-style(32px, $ff-LatoExtraBold, $color-black);
+                }
+    
+                &__text {
+                    @include font-style(16px, $ff-LatoSemiBold, $color-text);
+                    line-height: 24px;
+                }
+    
+                &__brand {
+                    margin-top: 48px;
+                    
+                    img {
+                        padding: 16px 12px;
+                        background-color: #f9f8f7;
+                        border-radius: 8px;
+                        filter: grayscale(1);
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+                        &:hover{
+                            filter: grayscale(0);
+                            background-color: $color-white;
+                            box-shadow: 0 0 5px silver;
+                        }
+                    }
+                    
+                    .slick-prev{
+                        left: calc(100% - 60%);
+                        bottom: -20%;    
+                        
+                    }
+                    .slick-next{
+                        right: calc(100% - 60%);
+                        bottom: -20%;
+                    }
+                    
+                }
+
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    #workplaces {
+        width: 100%;
+        min-height: 594px;
+    
+        .workplaces-wrapper {
+            padding: 48px 0;
+    
+            .workplaces {
+                &__title {
+                    @include font-style(32px, $ff-LatoExtraBold, $color-black);
+                }
+    
+                &__text {
+                    @include font-style(16px, $ff-LatoSemiBold, $color-text);
+                    line-height: 24px;
+                }
+    
+                &__brand {
+                    margin-top: 48px;
+                    img {
+                        padding: 16px 12px;
+                        background-color: #f9f8f7;
+                        border-radius: 8px;
+                        filter: grayscale(1);
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+                        &:hover{
+                            filter: grayscale(0);
+                            background-color: $color-white;
+                            box-shadow: 0 0 5px silver;
+                        }
+                    } 
+                    .slick-prev{
+                        left: calc(100% - 64%);
+                        bottom: -20%;    
+                        
+                    }
+                    .slick-next{
+                        right: calc(100% - 64%);
+                        bottom: -20%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    #workplaces {
+        width: 100%;
+        min-height: 574px;
+        .workplaces-wrapper {
+            padding: 32px 0;
+    
+            .workplaces {
+                &__title {
+                    @include font-style(28px, $ff-LatoBold, $color-black);
+                }
+    
+                &__text {
+                    @include font-style(14px, $ff-LatoSemiBold, $color-text);
+                    line-height: 24px;
+                }
+    
+                &__brand {
+                    margin-top: 56px;
+                    img {
+                        padding: 16px 12px;
+                        background-color: #f9f8f7;
+                        border-radius: 8px;
+                        filter: grayscale(1);
+                        transition: all 0.3s ease;
+                        cursor: pointer;
+                        &:hover{
+                            filter: grayscale(0);
+                            background-color: $color-white;
+                            box-shadow: 0 0 5px silver;
+                        }
+                    }
+                   
+
+                    .slick-prev{
+                        left: calc(100% - 80%);
+                        bottom: -20%;    
+                        
+                    }
+                    .slick-next{
+                        right: calc(100% - 80%);
+                        bottom: -20%;
+                    }
+                }
+               
+            }
+        }
+    }
+}
+
+
+///// slick arrows
+
+.workplaces__brand .slick-arrow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50px;
+    background-color: #e7e2dd;
+    font-size: 40px;
+    border: 1px solid transparent;
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    &:hover {
+        background-color: $color-white;
+        border: 1px solid $color-brown;
+    }
+
+    &:active {
+        background-color: $color-brown;
+        color: $color-white;
+    }
+}
+
+.workplaces__brand .slick-disabled {
+    color: silver;
+}
+
+
+.workplaces__brand .slick-slide > div {
+    padding: 10px;
+}
+
+
+// Dots 
+.workplaces__brand .slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 106%;
+    left: 0;
+    right: 0;
+}
+.workplaces__brand .slick-dots li{
+    list-style: none;
+    margin: 0px 8px;
+}
+.workplaces__brand .slick-dots button{
+    font-size: 0;
+    width: 8px;
+    height: 8px;
+    background-color: #e7e2dd;
+    border-radius: 50%;
+}
+.workplaces__brand .slick-dots li.slick-active button{
+    background-color: $color-brown;
+}

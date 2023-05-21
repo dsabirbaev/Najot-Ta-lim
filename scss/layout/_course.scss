@@ -1,0 +1,603 @@
+
+#course{
+    width: 100%;
+    min-height: 733px;
+
+    .course-wrapper{
+        display: flex;
+        flex-direction: column;
+        padding-top: 115px;
+
+        .course{
+            &__header{
+                @include font-style(16px, $ff-LatoMedium, #C4C4C4);
+                line-height: 22px;
+                cursor: pointer;
+                span{
+                    margin-left: 20px;
+                    color: $color-brown;
+                    position: relative;
+                    &::before{
+                        content: "";
+                        width: 12px;
+                        height: 100%;
+                        background-image: url(/assets/icons/arrow-course.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        position: absolute;
+                        top: 0;
+                        right: 110%;
+                    }
+                }
+            }
+            &__search{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                &--title{
+                    @include font-style(32px, $ff-LatoExtraBold, $color-black);
+                    letter-spacing: -0.64px;
+                    line-height: 56px;
+                }
+                &--input{
+                    display: flex;
+                    align-items: center;
+                    // max-width: 350px;
+                    background-color: #F7F7F5;
+                    border-radius: 100px;
+                    padding: 14px;
+                    input{
+                        width: 293px;
+                        margin-right: 6px;
+                        background-color: #F7F7F5;
+                       
+                        &::placeholder{
+                            @include font-style(16px, $ff-LatoRegular, #757575);
+                        }
+                    }
+                }
+            }
+            &__list{
+                display: flex;
+                column-gap: 16px;
+                a{
+                    border: 1px solid transparent;
+                    padding: 16px 26px;
+                    @include font-style(14px, $ff-LatoSemiBold, $color-black);
+                    line-height: 18px;
+                    border-radius: 100px;
+                    background-color: $color-bg-hover;
+                    transition: all 0.3s ease;
+                    &:first-child{
+                        background-color: $color-brown;
+                        color: $color-white;
+                    }
+                    &:hover:not(:first-child){
+                        border: 1px solid $color-brown;
+                        background-color: $color-white;
+                    }
+                }
+            }
+
+            &__card{
+                margin-top: 72px;
+                display: flex;
+                justify-content: space-between;
+                &--item{
+                    border-radius: 4px;
+                    max-width: 543.5px;
+                    padding: 24px;
+                    background-color: #F9F8F7;
+                    transition: all 0.3s ease;
+                    cursor: pointer;
+                    &:hover{
+                        box-shadow: 0 0 12px silver;
+                    }
+                    &-header{
+                        margin-bottom: 24px;
+                        span{
+                            &:nth-child(1){
+                                @include font-style(14px, $ff-LatoMedium, $color-black);
+                                line-height: 18px;
+                                padding: 5px 13px 5px 12px;
+                                background-color: #D1D1D1;
+                                border-radius: 4px;
+                                margin-right: 24px;
+                            }
+                            &:not(:first-child){
+                                @include font-style(14px, $ff-LatoRegular, $color-brown);
+                                line-height: 18px;
+                                margin-left: 23px;
+                            }
+                        }
+                    }
+                    &-body{
+                        display: flex;
+                        column-gap: 12px;
+                    }
+                    &-content{
+                       
+                        h1{
+                            @include font-style(28px, $ff-LatoBold, $color-black);
+                            line-height: 34px;
+                            letter-spacing: -0.56px;
+                            margin-bottom: 24px;
+                        }
+                        p{
+                            @include font-style(14px, $ff-LatoMedium, $color-black);
+                            line-height: 24px;
+                            letter-spacing: -0.28px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+////////////// media queries ///////////////////////
+
+@media only screen and (max-width: 1024px) {
+    #course{
+        width: 100%;
+        min-height: 733px;
+    
+        .course-wrapper{
+            display: flex;
+            flex-direction: column;
+            padding-top: 115px;
+            padding-bottom: 20px;
+            .course{
+                &__header{
+                    @include font-style(16px, $ff-LatoMedium, #C4C4C4);
+                    line-height: 22px;
+                    cursor: pointer;
+                    span{
+                        margin-left: 20px;
+                        color: $color-brown;
+                        position: relative;
+                        &::before{
+                            content: "";
+                            width: 12px;
+                            height: 100%;
+                            background-image: url(/assets/icons/arrow-course.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            position: absolute;
+                            top: 0;
+                            right: 110%;
+                        }
+                    }
+                }
+                &__search{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    &--title{
+                        @include font-style(32px, $ff-LatoExtraBold, $color-black);
+                        letter-spacing: -0.64px;
+                        line-height: 56px;
+                    }
+                    &--input{
+                        display: flex;
+                        align-items: center;
+                        // max-width: 350px;
+                        background-color: #F7F7F5;
+                        border-radius: 100px;
+                        padding: 14px;
+                        input{
+                            width: 293px;
+                            margin-right: 6px;
+                            background-color: #F7F7F5;
+                           
+                            &::placeholder{
+                                @include font-style(16px, $ff-LatoRegular, #757575);
+                            }
+                        }
+                    }
+                }
+                &__list{
+                    display: flex;
+                    column-gap: 16px;
+                    a{
+                        border: 1px solid transparent;
+                        padding: 16px 26px;
+                        @include font-style(14px, $ff-LatoSemiBold, $color-black);
+                        line-height: 18px;
+                        border-radius: 100px;
+                        background-color: $color-bg-hover;
+                        transition: all 0.3s ease;
+                        &:first-child{
+                            background-color: $color-brown;
+                            color: $color-white;
+                        }
+                        &:hover:not(:first-child){
+                            border: 1px solid $color-brown;
+                            background-color: $color-white;
+                        }
+                    }
+                }
+    
+                &__card{
+                    margin-top: 72px;
+                    display: flex;
+                    gap: 30px;
+                    
+                    &--item{
+                        border-radius: 4px;
+                        max-width: 450px;
+                        padding: 16px;
+                        background-color: #F9F8F7;
+                        display: flex;
+                        flex-direction: column;
+                        &-header{
+                            order: 2;
+                            margin-bottom: 24px;
+                            span{
+                                &:nth-child(1){
+                                    margin-top: 10px;
+                                    @include font-style(14px, $ff-LatoMedium, $color-black);
+                                    line-height: 18px;
+                                    padding: 5px 13px 5px 12px;
+                                    background-color: #D1D1D1;
+                                    border-radius: 4px;
+                                    margin-right: 0px;
+                                    display: block;
+                                    width: fit-content;
+                                }
+                                &:not(:first-child){
+                                    @include font-style(14px, $ff-LatoRegular, $color-brown);
+                                    line-height: 18px;
+                                    margin-left: 0px;
+                                }
+                                &:nth-child(2){
+                                    display: block;
+                                    margin: 10px 0;
+                                }
+                            }
+                        }
+                        &-body{
+                            display: flex;
+                            column-gap: 12px;
+                            flex-direction: column;
+
+                            img{
+                                width: 50%;
+                                align-self: center;
+                            }
+                        }
+                        &-content{
+                            order: 2;
+                            h1{
+                                @include font-style(24px, $ff-LatoBold, $color-black);
+                                line-height: 29px;
+                                letter-spacing: -0.48px;
+                                margin-bottom: 24px;
+                            }
+                            p{
+                                @include font-style(14px, $ff-LatoMedium, $color-black);
+                                line-height: 24px;
+                                letter-spacing: -0.28px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 700px) {
+    #course{
+        width: 100%;
+        min-height: 733px;
+    
+        .course-wrapper{
+            display: flex;
+            flex-direction: column;
+            padding-top: 115px;
+            padding-bottom: 20px;
+            .course{
+                &__header{
+                    @include font-style(16px, $ff-LatoMedium, #C4C4C4);
+                    line-height: 22px;
+                    cursor: pointer;
+                    span{
+                        margin-left: 20px;
+                        color: $color-brown;
+                        position: relative;
+                        &::before{
+                            content: "";
+                            width: 12px;
+                            height: 100%;
+                            background-image: url(/assets/icons/arrow-course.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            position: absolute;
+                            top: 0;
+                            right: 110%;
+                        }
+                    }
+                }
+                &__search{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    &--title{
+                        @include font-style(28px, $ff-LatoBold, $color-black);
+                        letter-spacing: -0.56px;
+                        line-height: 56px;
+                    }
+                    &--input{
+                        display: flex;
+                        align-items: center;
+                        // max-width: 350px;
+                        background-color: #F7F7F5;
+                        border-radius: 100px;
+                        padding: 14px;
+                        input{
+                            width: 293px;
+                            margin-right: 6px;
+                            background-color: #F7F7F5;
+                           
+                            &::placeholder{
+                                @include font-style(16px, $ff-LatoRegular, #757575);
+                            }
+                        }
+                    }
+                }
+                &__list{
+                    display: flex;
+                    column-gap: 16px;
+                    a{
+                        border: 1px solid transparent;
+                        padding: 16px 26px;
+                        @include font-style(14px, $ff-LatoSemiBold, $color-black);
+                        line-height: 18px;
+                        border-radius: 100px;
+                        background-color: $color-bg-hover;
+                        transition: all 0.3s ease;
+                        &:first-child{
+                            background-color: $color-brown;
+                            color: $color-white;
+                        }
+                        &:hover:not(:first-child){
+                            border: 1px solid $color-brown;
+                            background-color: $color-white;
+                        }
+                    }
+                }
+    
+                &__card{
+                    margin-top: 72px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                  
+                    &--item{
+                        border-radius: 4px;
+                        max-width: 100%;
+                        padding: 16px;
+                        background-color: #F9F8F7;
+                        display: flex;
+                        flex-direction: column;
+                        &-header{
+                            order: -1;
+                            margin-bottom: 18px;
+                            span{
+                                &:nth-child(1){
+                                    margin-top: 10px;
+                                    @include font-style(14px, $ff-LatoMedium, $color-white);
+                                    line-height: 18px;
+                                    padding: 5px 13px 5px 12px;
+                                    background-color: $color-black;
+                                    border-radius: 4px;
+                                    margin-right: 0px;
+                                    display: inline;
+                                    width: fit-content;
+                                }
+                                &:not(:first-child){
+                                    @include font-style(14px, $ff-LatoRegular, $color-brown);
+                                    line-height: 18px;
+                                    margin-left: 0px;
+                                }
+                                &:nth-child(2){
+                                    display: inline;
+                                    margin: 10px 10px;
+                                }
+                            }
+                        }
+                        &-body{
+                            display: flex;
+                            column-gap: 12px;
+                            flex-direction: row;
+
+                            img{
+                                width: 50%;
+                                align-self: center;
+                            }
+                        }
+                        &-content{
+                            order: -1;
+                            h1{
+                                @include font-style(24px, $ff-LatoBold, $color-black);
+                                line-height: 29px;
+                                letter-spacing: -0.48px;
+                                margin-bottom: 24px;
+                            }
+                            p{
+                                @include font-style(14px, $ff-LatoMedium, $color-black);
+                                line-height: 24px;
+                                letter-spacing: -0.28px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 576px) {
+    #course{
+        width: 100%;
+        min-height: 733px;
+    
+        .course-wrapper{
+            display: flex;
+            flex-direction: column;
+            padding-top: 115px;
+            padding-bottom: 20px;
+            .course{
+                &__header{
+                    @include font-style(16px, $ff-LatoMedium, #C4C4C4);
+                    line-height: 22px;
+                    cursor: pointer;
+                    span{
+                        margin-left: 20px;
+                        color: $color-brown;
+                        position: relative;
+                        &::before{
+                            content: "";
+                            width: 12px;
+                            height: 100%;
+                            background-image: url(/assets/icons/arrow-course.svg);
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            position: absolute;
+                            top: 0;
+                            right: 110%;
+                        }
+                    }
+                }
+                &__search{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin-bottom: 24px;
+                    &--title{
+                        @include font-style(28px, $ff-LatoBold, $color-black);
+                        letter-spacing: -0.56px;
+                        line-height: 56px;
+                    }
+                    &--input{
+                        display: flex;
+                        align-items: center;
+                        // max-width: 350px;
+                        background-color: #F7F7F5;
+                        border-radius: 100px;
+                        padding: 14px;
+                        input{
+                            width: 293px;
+                            margin-right: 6px;
+                            background-color: #F7F7F5;
+                           
+                            &::placeholder{
+                                @include font-style(16px, $ff-LatoRegular, #757575);
+                            }
+                        }
+                    }
+                }
+                &__list{
+                    display: flex;
+                    column-gap: 16px;
+                    a{
+                        border: 1px solid transparent;
+                        padding: 16px 26px;
+                        @include font-style(14px, $ff-LatoSemiBold, $color-black);
+                        line-height: 18px;
+                        border-radius: 100px;
+                        background-color: $color-bg-hover;
+                        transition: all 0.3s ease;
+                        &:first-child{
+                            background-color: $color-brown;
+                            color: $color-white;
+                        }
+                        &:hover:not(:first-child){
+                            border: 1px solid $color-brown;
+                            background-color: $color-white;
+                        }
+                    }
+                }
+    
+                &__card{
+                    margin-top: 72px;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 30px;
+                  
+                    &--item{
+                        border-radius: 4px;
+                        max-width: 100%;
+                        padding: 16px;
+                        background-color: #F9F8F7;
+                        display: flex;
+                        flex-direction: column;
+                        &-header{
+                            order: 2;
+                            margin-bottom: 18px;
+                            span{
+                                &:nth-child(1){
+                                    margin-top: 10px;
+                                    @include font-style(14px, $ff-LatoMedium, $color-black);
+                                    line-height: 18px;
+                                    padding: 5px 13px 5px 12px;
+                                    background-color: #D1D1D1;
+                                    border-radius: 4px;
+                                    margin-right: 0px;
+                                    display: block;
+                                    width: fit-content;
+                                }
+                                &:not(:first-child){
+                                    @include font-style(14px, $ff-LatoRegular, $color-brown);
+                                    line-height: 18px;
+                                    margin-left: 0px;
+                                }
+                                &:nth-child(2){
+                                    display: block;
+                                    margin: 5px 0px;
+                                   
+                                }
+                            }
+                        }
+                        &-body{
+                            display: flex;
+                            column-gap: 12px;
+                            flex-direction: column;
+
+                            img{
+                                width: 50%;
+                                align-self: center;
+                            }
+                        }
+                        &-content{
+                            order: 2;
+                            h1{
+                                @include font-style(24px, $ff-LatoBold, $color-black);
+                                line-height: 29px;
+                                letter-spacing: -0.48px;
+                                margin-bottom: 24px;
+                               
+                            }
+                            p{
+                                @include font-style(14px, $ff-LatoMedium, $color-black);
+                                line-height: 24px;
+                                letter-spacing: -0.28px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bg-course{
+    color: $color-white;
+    background-color: #021923;
+}

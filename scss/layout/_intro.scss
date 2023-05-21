@@ -1,0 +1,503 @@
+
+
+.intro{
+    background-color: $color-bg;
+}
+
+#intro{
+    width: 100%;
+    // padding-top: 85px;
+    background-image: url("../assets/images/intro/intro-illustr\(desktop\).svg");
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    // background-color: $color-bg;
+   
+    .intro-wrapper{
+        min-height: 587px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        padding-top: 50px;
+        img{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+   
+    .intro{
+        &__content{
+        }
+        &__title{
+            @include font-style(40px, $ff-LatoBold, $color-black);
+            line-height: 56px;
+            letter-spacing: -0.8px;
+            .text {
+                position: relative;
+                color: $color-brown;
+                margin-bottom: 20px;
+            }
+    
+            .burad-t.t1,
+            .burad-t.t2 {
+                animation-name: text-down;
+                animation-duration: 12s;
+                animation-iteration-count: infinite;
+            }
+    
+            .text .burad-t {
+                position: absolute;
+                left: 0px;
+                bottom: -52px;
+                margin-bottom: 12px;
+                opacity: 0;
+            }
+    
+            .burad-t .t2 {
+                animation-name: text-down;
+                animation-duration: 12s;
+                animation-iteration-count: infinite;
+            }
+    
+            .burad-t.t2 {
+                animation-delay: 3s;
+            }
+    
+            .burad-t.t1,
+            .burad-t.t2 {
+                animation-name: text-down;
+                animation-duration: 12s;
+                animation-iteration-count: infinite;
+            }
+    
+            .burad-t.t3,
+            .burad-t.t4 {
+                animation-name: text-down;
+                animation-duration: 12s;
+            }
+    
+            .burad-t.t3 {
+                animation-iteration-count: infinite;
+                animation-delay: 6s;
+            }
+    
+            .burad-t.t4 {
+                animation-iteration-count: infinite;
+                animation-delay: 9s;
+            }
+    
+            .burad-t.t3 {
+                animation-iteration-count: infinite;
+                animation-delay: 6s;
+            }
+    
+            .burad-t.t3,
+            .burad-t.t4 {
+                animation-name: text-down;
+                animation-duration: 12s;
+            }
+    
+            @keyframes text-down {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-10px);
+                }
+    
+                10% {
+                    opacity: 1;
+                    transform: translate(0);
+                }
+    
+                20% {
+                    opacity: 1;
+                    transform: translate(0);
+                }
+    
+                30% {
+                    opacity: 0;
+                    transform: translateY(10px);
+                }
+            }
+        }
+        
+        &__text{
+            @include font-style(18px, $ff-LatoSemiBold, #607987);
+            letter-spacing: -0.36px;
+            max-width: 313px;
+        }
+        &__btn{
+            margin-top: 70px;
+            padding: 13px 47.8px 13px 46px;
+            
+            @include font-style(16px, $ff-LatoBold, $color-white);
+            background-color: $color-brown;
+            border-radius: 100px;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+            &:hover{
+                background-color: $color-bg-hover;
+                color: $color-black;
+                border: 2px solid $color-brown;
+            }
+        }
+    }
+}
+
+
+
+////////////// media queries ///////////////////////
+
+
+@media only screen and (max-width: 1024px){
+    #intro{
+        width: 100%;
+        // padding-top: 85px;
+        background-image: url("../assets/images/intro/intro-illustr\(desktop\).svg");
+        background-repeat: no-repeat;
+        background-size: 80%;
+        background-position: 180% 100%;
+        background-color: $color-bg;
+       
+        .intro-wrapper{
+            min-height: 587px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 100px;
+            img{
+                width: 550px;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+       
+        .intro{
+            &__content{
+                // min-width: 325px;
+            }
+            &__title{
+                @include font-style(40px, $ff-LatoBold, $color-black);
+                line-height: 56px;
+                letter-spacing: -0.8px;
+            }
+            
+            &__text{
+                @include font-style(18px, $ff-LatoSemiBold, #607987);
+                letter-spacing: -0.36px;
+                max-width: 313px;
+            }
+            &__btn{
+                margin-top: 70px;
+                padding: 13px 47.8px 13px 46px;
+                
+                @include font-style(16px, $ff-LatoBold, $color-white);
+                background-color: $color-brown;
+                border-radius: 100px;
+                border: 2px solid transparent;
+                transition: all 0.2s ease;
+                &:hover{
+                    background-color: $color-bg-hover;
+                    color: $color-black;
+                    border: 2px solid $color-brown;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    #intro{
+        width: 100%;
+        // padding-top: 85px;
+        background-image: url("../assets/images/intro/intro-tablet.png");
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position: 100% 100%;
+        background-color: $color-bg;
+       
+        .intro-wrapper{
+            min-height: 487px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 100px;
+            img{
+                display: none;
+            }
+        }
+       
+        .intro{
+            &__content{
+                // min-width: 325px;
+            }
+            &__title{
+                @include font-style(32px, $ff-LatoBold, $color-black);
+                line-height: 56px;
+                letter-spacing: -0.8px;
+                max-width: auto;
+                .text {
+                    position: relative;
+                    color: $color-brown;
+                    margin-bottom: 0px;
+                }
+
+                .burad-t {
+                    width: 100%;
+                }
+                .burad-t.t1,
+                .burad-t.t2 {
+                    animation-name: text-down;
+                    animation-duration: 12s;
+                    animation-iteration-count: infinite;
+                }
+        
+                .text .burad-t {
+                    position: absolute;
+                    left: calc(100% - 55%);
+                    bottom: 0px;
+                    margin-bottom: 0px;
+                    opacity: 0;
+                }
+        
+                .burad-t .t2 {
+                    animation-name: text-down;
+                    animation-duration: 12s;
+                    animation-iteration-count: infinite;
+                }
+        
+                .burad-t.t2 {
+                    animation-delay: 3s;
+                }
+        
+                .burad-t.t1,
+                .burad-t.t2 {
+                    animation-name: text-down;
+                    animation-duration: 12s;
+                    animation-iteration-count: infinite;
+                }
+        
+                .burad-t.t3,
+                .burad-t.t4 {
+                    animation-name: text-down;
+                    animation-duration: 12s;
+                }
+        
+                .burad-t.t3 {
+                    animation-iteration-count: infinite;
+                    animation-delay: 6s;
+                }
+        
+                .burad-t.t4 {
+                    animation-iteration-count: infinite;
+                    animation-delay: 9s;
+                }
+        
+                .burad-t.t3 {
+                    animation-iteration-count: infinite;
+                    animation-delay: 6s;
+                }
+        
+                .burad-t.t3,
+                .burad-t.t4 {
+                    animation-name: text-down;
+                    animation-duration: 12s;
+                }
+        
+                @keyframes text-down {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+        
+                    10% {
+                        opacity: 1;
+                        transform: translate(0);
+                    }
+        
+                    20% {
+                        opacity: 1;
+                        transform: translate(0);
+                    }
+        
+                    30% {
+                        opacity: 0;
+                        transform: translateY(10px);
+                    }
+                }
+            }
+            
+            &__text{
+                @include font-style(14px, $ff-LatoSemiBold, #607987);
+                letter-spacing: -0.36px;
+                line-height: 20px;
+                max-width: 313px;
+            }
+            &__btn{
+                margin-top: 40px;
+                padding: 13px 47.8px 13px 46px;
+                
+                @include font-style(16px, $ff-LatoBold, $color-white);
+                background-color: $color-brown;
+                border-radius: 100px;
+                border: 2px solid transparent;
+                transition: all 0.2s ease;
+                &:hover{
+                    background-color: $color-bg-hover;
+                    color: $color-black;
+                    border: 2px solid $color-brown;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    #intro{
+        width: 100%;
+        // padding-top: 85px;
+        background-image: none;
+        background-repeat: no-repeat;
+        background-size: 60%;
+        background-position: 100% 100%;
+        background-color: $color-bg;
+       
+        .intro-wrapper{
+            min-height: 308px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 40px;
+            img{
+                display: none;
+            }
+        }
+       
+        .intro{
+            &__content{
+                // min-width: 325px;
+            }
+            &__title{
+                @include font-style(24px, $ff-LatoBold, $color-black);
+                line-height: 36px;
+                letter-spacing: -0.48px;
+                max-width: 260px;
+                .text {
+                    position: relative;
+                    color: $color-brown;
+                    margin-bottom: 0px;
+                }
+
+                .burad-t {
+                    width: 100%;
+                }
+                .burad-t.t1,
+                .burad-t.t2 {
+                    animation-name: text-down;
+                    animation-duration: 12s;
+                    animation-iteration-count: infinite;
+                }
+        
+                .text .burad-t {
+                    position: absolute;
+                    left: calc(100% - 60%);
+                    bottom: 0px;
+                    margin-bottom: 0px;
+                    opacity: 0;
+                }
+        
+                .burad-t .t2 {
+                    animation-name: text-down;
+                    animation-duration: 12s;
+                    animation-iteration-count: infinite;
+                }
+        
+                .burad-t.t2 {
+                    animation-delay: 3s;
+                }
+        
+                .burad-t.t1,
+                .burad-t.t2 {
+                    animation-name: text-down;
+                    animation-duration: 12s;
+                    animation-iteration-count: infinite;
+                }
+        
+                .burad-t.t3,
+                .burad-t.t4 {
+                    animation-name: text-down;
+                    animation-duration: 12s;
+                }
+        
+                .burad-t.t3 {
+                    animation-iteration-count: infinite;
+                    animation-delay: 6s;
+                }
+        
+                .burad-t.t4 {
+                    animation-iteration-count: infinite;
+                    animation-delay: 9s;
+                }
+        
+                .burad-t.t3 {
+                    animation-iteration-count: infinite;
+                    animation-delay: 6s;
+                }
+        
+                .burad-t.t3,
+                .burad-t.t4 {
+                    animation-name: text-down;
+                    animation-duration: 12s;
+                }
+        
+                @keyframes text-down {
+                    0% {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+        
+                    10% {
+                        opacity: 1;
+                        transform: translate(0);
+                    }
+        
+                    20% {
+                        opacity: 1;
+                        transform: translate(0);
+                    }
+        
+                    30% {
+                        opacity: 0;
+                        transform: translateY(10px);
+                    }
+                }
+
+            }
+            
+            &__text{
+                @include font-style(14px, $ff-LatoSemiBold, #607987);
+                letter-spacing: -0.28px;
+                line-height: 20px;
+                max-width: 300px;
+            }
+            &__btn{
+                margin-top: 24px;
+                padding: 8px 35px 8px 33px;
+                
+                @include font-style(16px, $ff-LatoBold, $color-white);
+                background-color: $color-brown;
+                border-radius: 100px;
+                border: 2px solid transparent;
+                transition: all 0.2s ease;
+                &:hover{
+                    background-color: $color-bg-hover;
+                    color: $color-black;
+                    border: 2px solid $color-brown;
+                }
+            }
+        }
+    }
+
+}
+
+

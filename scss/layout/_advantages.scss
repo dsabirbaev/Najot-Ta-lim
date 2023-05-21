@@ -1,0 +1,146 @@
+#advantages {
+    width: 100%;
+    min-height: 521px;
+
+    .advantages-wrapper {
+        padding: 48px 0;
+
+        .advantages {
+            &__title {
+                @include font-style(32px, $ff-LatoExtraBold, $color-black);
+                letter-spacing: -0.64px;
+                margin-bottom: 48px;
+            }
+
+            &__card {
+                display: flex;
+                column-gap: 44px;
+
+                &--margin {
+                    margin-bottom: 40px;
+                }
+
+                &--item {
+                    display: flex;
+                    align-items: flex-start;
+
+                    column-gap: 40px;
+
+                    &-content {
+                        max-width: 448.63px;
+                    }
+
+                    h1 {
+                        @include font-style(20px, $ff-LatoSemiBold, $color-black);
+                        letter-spacing: -0.4px;
+                    }
+
+                    p {
+                        @include font-style(14px, $ff-LatoRegular, #607987);
+                        letter-spacing: -0.28px;
+                        line-height: 20px;
+
+                    }
+                }
+            }
+
+            &__more {
+                margin-top: 30px;
+                @include font-style(16px, $ff-LatoSemiBold, #0EB182);
+                letter-spacing: -0.32px;
+                display: flex;
+                column-gap: 12px;
+
+                .arrow-more {
+                    color: $color-black;
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    cursor: pointer;
+                    background-color: #ba8d5b1a;
+                    border: 1px solid transparent;
+
+                    &:hover {
+                        background-color: $color-white;
+                        border: 1px solid $color-brown;
+                    }
+
+                    &:active {
+                        background-color: $color-brown;
+                        color: $color-white;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+////////////// media queries ///////////////////////
+
+@media only screen and (max-width: 1024px) {
+    
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    #advantages{
+        .advantages-wrapper{
+            padding-bottom: 48px;
+            .advantages {
+            
+                &__card {
+                    display: flex;
+                    column-gap: 40px;
+                    
+                    &--item{
+                       
+                    }
+                }
+        
+                &__more{
+                    margin-top: 16px;
+                    
+                }
+            }
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    #advantages{
+        .advantages-wrapper{
+            padding: 32px 0;
+            .advantages {
+                &__title {
+                    @include font-style(28px, $ff-LatoBold, $color-black);
+                    letter-spacing: -0.56px;
+                    margin-bottom: 32px;
+                }
+                &__card {
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 32px;
+                   
+                    &--item{
+                        align-items: center;
+                    }
+                }
+        
+                &__more{
+                    margin-top: 16px;
+                    
+                }
+            }
+        }
+    }
+}

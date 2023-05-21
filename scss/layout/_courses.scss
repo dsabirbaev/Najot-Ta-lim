@@ -1,0 +1,121 @@
+
+.courses{
+    background-color: $color-bg;
+}
+
+#courses{
+    width: 100%;
+    min-height: 361px;
+    .courses-wrapper{
+        padding: 48px 0;
+
+        .courses{
+            &__title{
+                @include font-style(32px, $ff-LatoExtraBold, $color-black);
+                letter-spacing: -0.64px;
+            }
+            &__text{
+                @include font-style(16px, $ff-LatoSemiBold, $color-text);
+            }
+            &__card{
+                margin-top: 24px;
+                margin-bottom: 18px;
+                display: flex;
+                column-gap: 33px;
+                &--item{
+                    padding: 16px 17px 17px 17px;
+                    border: 1px solid $color-text;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    &:hover{
+                        background-color: $color-white;
+                        border-color: transparent;
+                        box-shadow: 0 0 12px silver;
+                    }
+                    h1{
+                        @include font-style(20px, $ff-LatoBold, $color-black);
+                        letter-spacing: -0.4px;
+                    }
+                    p{
+                        @include font-style(16px, $ff-LatoMedium, $color-text);
+                        letter-spacing: -0.32px;
+                    }
+                }
+            }
+            &__more{
+                @include font-style(16px, $ff-LatoBold, #0EB182);
+                
+            }
+        }
+    }
+}
+
+
+
+////////////// media queries ///////////////////////
+
+@media only screen and (max-width: 1024px) {
+    
+}
+
+
+
+@media only screen and (max-width: 768px) {
+    
+}
+
+
+
+@media only screen and (max-width: 576px) {
+    #courses{
+        width: 100%;
+        background-color: $color-bg;
+        min-height: 361px;
+        .courses-wrapper{
+            padding: 24px 0;
+    
+            .courses{
+                &__title{
+                    @include font-style(28px, $ff-LatoBold, $color-black);
+                    letter-spacing: -0.56px;
+                }
+                &__text{
+                    @include font-style(14px, $ff-LatoSemiBold, $color-text);
+                }
+                &__card{
+                    margin-top: 24px;
+                    margin-bottom: 18px;
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: 24px;
+                    &--item{
+                        padding: 16px 17px 17px 17px;
+                        border: 1px solid $color-text;
+                        border-radius: 6px;
+                        cursor: pointer;
+                        transition: all 0.3s ease;
+                        &:hover{
+                            background-color: $color-white;
+                            border-color: transparent;
+                            box-shadow: 0 0 12px silver;
+                        }
+                        h1{
+                            @include font-style(20px, $ff-LatoBold, $color-black);
+                            letter-spacing: -0.4px;
+                        }
+                        p{
+                            @include font-style(16px, $ff-LatoMedium, $color-text);
+                            letter-spacing: -0.32px;
+                        }
+                    }
+                }
+                &__more{
+                    @include font-style(16px, $ff-LatoBold, #0EB182);
+                    
+                }
+            }
+        }
+    }
+   
+}
